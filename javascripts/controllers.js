@@ -20,6 +20,10 @@ appPageControllers.controller('RegisterController', ['$scope', '$http', '$window
       console && console.log && console.log(data, status);
       alert('There was an error during your registration. Please try again.');
     });
+
+    $scope.$watch('name', function () {
+      console.log($scope.name);
+    });
   };
 //    $http.get(endpoint + '/search?page=' + page + (query.length ? '&' + query.join('&') : '')).success(function (response) {
 //      if (!response.data.length) { done = true; }

@@ -13,27 +13,27 @@
   <form ng-submit="register()" ng-if="!success">
     <label>
       <span>Endpoint</span>
-      <input type="text" name="endpoint" value="" ng-model="endpoint"/>
+      <input type="text" name="endpoint" value="" ng-model="endpoint" size="50"/>
     </label>
     <label>
       <span>Name</span>
-      <input type="text" name="name" value="" ng-model="name"/>
+      <input type="text" name="name" value="" ng-model="name" size="50"/>
     </label>
     <label>
       <span>Email</span>
-      <input type="text" name="email" value="" ng-model="email"/>
+      <input type="text" name="email" value="" ng-model="email" size="50"/>
     </label>
     <label>
       <span>Website</span>
-      <input type="text" name="website" value="" ng-model="website"/>
+      <input type="text" name="website" value="" ng-model="website" size="50"/>
     </label>
     <label>
       <span>Description (Optional)</span>
-      <textarea name="description" ng-model="description"></textarea>
+      <textarea name="description" ng-model="description" rows="10" cols="50"></textarea>
     </label>
     <label>
       <span>Organization (Optional)</span>
-      <input type="text" name="organization" value="" ng-model="organization"/>
+      <input type="text" name="organization" value="" ng-model="organization" size="50"/>
     </label>
   </form>
 </div>
