@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('directory', ['ngRoute', 'infinite-scroll', 'ui.bootstrap', 'appPageControllers']);
+var app = angular.module('directory', ['appPageControllers']);
 app.directive('cancelClick', function () {
   return function(scope, element, attrs) {
     element.bind('click', function (e) {

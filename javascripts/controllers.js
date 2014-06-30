@@ -1,6 +1,6 @@
 'use strict';
 
-var appPageControllers = angular.module('appPageControllers', ['base64']);
+var appPageControllers = angular.module('appPageControllers', []);
 
 appPageControllers.controller('RegisterController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
   $scope.name = '';
