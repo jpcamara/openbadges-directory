@@ -1,0 +1,31 @@
+<div id="registration" ng-controller="RegisterController">
+  <div class="registered" ng-if="success">
+    Thanks for adding your badges to the directory.
+  </div>
+  <form ng-submit="register()" ng-if="!success">
+    <label>
+      Endpoint
+      <input type="text" name="endpoint" value="" ng-model="endpoint"/>
+    </label>
+    <label>
+      Name
+      <input type="text" name="name" value="" ng-model="name"/>
+    </label>
+    <label>
+      Email
+      <input type="text" name="email" value="" ng-model="email"/>
+    </label>
+    <label>
+      Website
+      <input type="text" name="website" value="" ng-model="website"/>
+    </label>
+    <label>
+      Description (Optional)
+      <textarea name="description" ng-model="description"></textarea>
+    </label>
+    <label>
+      Organization (Optional)
+      <input type="text" name="organization" value="" ng-model="organization"/>
+    </label>
+  </form>
+</div>
