@@ -12,7 +12,19 @@ appPageControllers.controller('RegisterController', ['$scope', '$http', '$window
   $scope.success = false;
 
   $scope.register = function () {
-    $http.post('').success(function (response) {
+    $http({
+      url: 'http://test-openbadges-directory.herokuapp.com/register',
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      data: {
+        name: $scope.name,
+        endpoint: $scope.endpoint,
+        email: $scope.email,
+        website: $scope.website,
+        description: $scope.description,
+        organization: $scope.organization
+      }
+    }).success(function (response) {
       if (response.data && response.data.success) {
         $scope.success = true;
       }
