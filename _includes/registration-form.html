@@ -12,27 +12,27 @@
   </div>
   <form ng-submit="register()" ng-if="!success">
     <label>
-      Endpoint
+      <span>Endpoint</span>
       <input type="text" name="endpoint" value="" ng-model="endpoint"/>
     </label>
     <label>
-      Name
+      <span>Name</span>
       <input type="text" name="name" value="" ng-model="name"/>
     </label>
     <label>
-      Email
+      <span>Email</span>
       <input type="text" name="email" value="" ng-model="email"/>
     </label>
     <label>
-      Website
+      <span>Website</span>
       <input type="text" name="website" value="" ng-model="website"/>
     </label>
     <label>
-      Description (Optional)
+      <span>Description (Optional)</span>
       <textarea name="description" ng-model="description"></textarea>
     </label>
     <label>
-      Organization (Optional)
+      <span>Organization (Optional)</span>
       <input type="text" name="organization" value="" ng-model="organization"/>
     </label>
   </form>
