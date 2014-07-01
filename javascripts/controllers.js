@@ -29,10 +29,10 @@ appPageControllers.controller('RegisterController', ['$scope', '$http', '$window
     }).success(function (response) {
       if (response.data && response.data.success) {
         $scope.success = true;
+        $scope.errors = null;
       }
     }).error(function (data, status) {
-      console && console.log && console.log(data, status);
-      console.log(data);
+      $scope.errors = data.errors;
       alert('There was an error during your registration. Please try again.');
     });
   };

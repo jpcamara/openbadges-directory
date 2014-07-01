@@ -23,26 +23,32 @@
     <label>
       <span>Endpoint</span>
       <input type="text" name="endpoint" value="" ng-model="endpoint" size="50"/>
+      <p ng-if="errors.endpoint"><strong>{{errors.endpoint.message}}</strong></p>
     </label>
     <label>
       <span>Name</span>
       <input type="text" name="name" value="" ng-model="name" size="50"/>
+      <p ng-if="errors.name"><strong>{{errors.name.message}}</strong></p>
     </label>
     <label>
       <span>Email</span>
       <input type="text" name="email" value="" ng-model="email" size="50"/>
+      <p ng-if="errors.email"><strong>{{errors.email.message}}</strong></p>
     </label>
     <label>
       <span>Website</span>
       <input type="text" name="website" value="" ng-model="website" size="50"/>
+      <p ng-if="errors.website"><strong>{{errors.website.message}}</strong></p>
     </label>
     <label>
       <span>Description (Optional)</span>
       <textarea name="description" ng-model="description" rows="10" cols="50"></textarea>
+      <p ng-if="errors.description"><strong>{{errors.description.message}}</strong></p>
     </label>
     <label>
       <span>Organization (Optional)</span>
       <input type="text" name="organization" value="" ng-model="organization" size="50"/>
+      <p ng-if="errors.organization"><strong>{{errors.organization.message}}</strong></p>
     </label>
 
     <button>Register</button>
