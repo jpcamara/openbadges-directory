@@ -1,6 +1,10 @@
 'use strict';
 
 var app = angular.module('directory', ['appPageControllers']);
+app.config(function ($httpProvider) {
+  $httpProvider.defaults.useXDomain = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+});
 app.directive('cancelClick', function () {
   return function(scope, element, attrs) {
     element.bind('click', function (e) {
