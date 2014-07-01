@@ -9,15 +9,6 @@
 <div id="registration" ng-controller="RegisterController">
   <div class="registered" ng-if="success">
     Thanks for adding your badges to the directory.<br/>
-    <p>
-      Here is the information you entered:<br/>
-      <div><strong>Endpoint</strong>: {{registerData.endpoint}}</div>
-      <div><strong>Name</strong>: {{registerData.name}}</div>
-      <div><strong>Email</strong>: {{registerData.email}}</div>
-      <div><strong>Website</strong>: {{registerData.website}}</div>
-      <div><strong>Description</strong>: {{registerData.description}}</div>
-      <div><strong>Organization</strong>: {{registerData.organization}}</div>
-    </p>
   </div>
   <form ng-submit="register()" ng-if="!success">
     Register to have your site indexed:<br/>
