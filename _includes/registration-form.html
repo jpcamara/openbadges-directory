@@ -11,15 +11,16 @@
     Thanks for adding your badges to the directory.<br/>
     <p>
       Here is the information you entered:<br/>
-      <div><strong>Endpoint</strong>: {{endpoint}}</div>
-      <div><strong>Name</strong>: {{name}}</div>
-      <div><strong>Email</strong>: {{email}}</div>
-      <div><strong>Website</strong>: {{website}}</div>
-      <div><strong>Description</strong>: {{description}}</div>
-      <div><strong>Organization</strong>: {{organization}}</div>
+      <div><strong>Endpoint</strong>: {{registerData.endpoint}}</div>
+      <div><strong>Name</strong>: {{registerData.name}}</div>
+      <div><strong>Email</strong>: {{registerData.email}}</div>
+      <div><strong>Website</strong>: {{registerData.website}}</div>
+      <div><strong>Description</strong>: {{registerData.description}}</div>
+      <div><strong>Organization</strong>: {{registerData.organization}}</div>
     </p>
   </div>
   <form ng-submit="register()" ng-if="!success">
+    Register to have your site indexed:<br/>
     <label>
       <span>Endpoint</span>
       <input type="text" name="endpoint" value="" ng-model="registerData.endpoint" size="50"/>

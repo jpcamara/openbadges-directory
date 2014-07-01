@@ -4,7 +4,6 @@ layout: site
 
 Directory for searching community badge classes.
 
-Register to have your site indexed:
 {% include registration-form.html %}
 
 ## Quick Start
