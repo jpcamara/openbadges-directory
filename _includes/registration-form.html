@@ -8,7 +8,16 @@
 
 <div id="registration" ng-controller="RegisterController">
   <div class="registered" ng-if="success">
-    Thanks for adding your badges to the directory.
+    Thanks for adding your badges to the directory.<br/>
+    <p>
+      Here is the information you entered:<br/>
+      <div><strong>Endpoint</strong>: {{endpoint}}</div>
+      <div><strong>Name</strong>: {{name}}</div>
+      <div><strong>Email</strong>: {{email}}</div>
+      <div><strong>Website</strong>: {{website}}</div>
+      <div><strong>Description</strong>: {{description}}</div>
+      <div><strong>Organization</strong>: {{organization}}</div>
+    </p>
   </div>
   <form ng-submit="register()" ng-if="!success">
     <label>

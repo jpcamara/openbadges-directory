@@ -32,6 +32,7 @@ appPageControllers.controller('RegisterController', ['$scope', '$http', '$window
       }
     }).error(function (data, status) {
       console && console.log && console.log(data, status);
+      console.log(data);
       alert('There was an error during your registration. Please try again.');
     });
   };
