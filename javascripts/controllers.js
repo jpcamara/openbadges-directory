@@ -3,6 +3,8 @@
 var appPageControllers = angular.module('appPageControllers', []);
 
 appPageControllers.controller('RegisterController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
+  $http.defaults.useXDomain = true;
+
   $scope.name = '';
   $scope.endpoint = '';
   $scope.email = '';
