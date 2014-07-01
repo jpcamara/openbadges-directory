@@ -5,12 +5,14 @@ var appPageControllers = angular.module('appPageControllers', []);
 
 
 appPageControllers.controller('RegisterController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
-  $scope.name = '';
-  $scope.endpoint = '';
-  $scope.email = '';
-  $scope.website = '';
-  $scope.description = '';
-  $scope.organization = '';
+  $scope.registerData = {
+    name: '',
+    endpoint: '',
+    email: '',
+    website: '',
+    description: '',
+    organization: ''
+  };
   $scope.success = false;
 
   $scope.register = function () {
@@ -18,14 +20,7 @@ appPageControllers.controller('RegisterController', ['$scope', '$http', '$window
       url: 'http://test-openbadges-directory.herokuapp.com/register',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      data: {
-        name: $scope.name,
-        endpoint: $scope.endpoint,
-        email: $scope.email,
-        website: $scope.website,
-        description: $scope.description,
-        organization: $scope.organization
-      }
+      data: $scope.registerData
     }).success(function (response) {
       if (response.data && response.data.success) {
         $scope.success = true;
